@@ -8,8 +8,6 @@ import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var model: MyViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,8 +15,9 @@ class MainActivity : AppCompatActivity() {
         val tv2 = findViewById<TextView>(R.id.tv_age)
 
 
-        // 뷰모델 초기화
-        model = ViewModelProvider(this).get(MyViewModel::class.java)
+        // 'by viewModels() 를 사용하여 Kotlin 프로퍼티를 위임'
+        // activity-ktx artifact
+        val model = MyViewModel by viewMdoels()
 
         val nameObserver = Observer<String> { newName ->
             tv1.text = newName
