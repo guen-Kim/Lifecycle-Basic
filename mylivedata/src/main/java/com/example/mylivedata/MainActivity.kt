@@ -3,8 +3,8 @@ package com.example.mylivedata
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // 'by viewModels() 를 사용하여 Kotlin 프로퍼티를 위임'
         // activity-ktx artifact
-        val model = MyViewModel by viewMdoels()
+        val model : MyViewModel by viewModels()
 
         val nameObserver = Observer<String> { newName ->
             tv1.text = newName
