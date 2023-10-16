@@ -9,13 +9,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mylifecycle">
         <activity
+            android:name="com.example.step3.MainActivity3"
+            android:exported="false" />
+        <activity
             android:name="com.example.step2.MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.step3.MainActivity3"
+            android:name="com.example.step4.SavedStateActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
