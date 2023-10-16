@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Step 1</string>
+    <string name="seconds">%d 초 경과</string>
+</resources>

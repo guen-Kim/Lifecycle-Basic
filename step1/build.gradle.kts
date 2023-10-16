@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mylivedata"
+    namespace = "com.example.step1"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.mylivedata"
+        applicationId = "com.example.step1"
         minSdk = 27
         targetSdk = 33
         versionCode = 1
@@ -36,11 +36,7 @@ android {
 }
 
 dependencies {
-    val lifecycle_version = "2.5.1"
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
-    // activity-ktx
-    implementation("androidx.activity:activity-ktx:1.8.0")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
